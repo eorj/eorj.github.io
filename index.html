@@ -16,12 +16,54 @@
 	background-color: #F6995C;
 	background-image: url("assets/noise.svg");
 }
+
+button {
+font-family: inherit;
+}
+.collapsible {
+  cursor: pointer;
+  text-align: left;
+  font-size: 30px;
+  margin-left: 5%;
+  border: none;
+  background: none;
+}
+.content {
+  padding: 4px;
+  display: none;
+  overflow: hidden;
+  font-size: 25px;
+  margin-left: 5%;
+}
+.active, .collapsible:hover {
+  color: #638889;
+}
 </style>
 </head>
 
 <body class="noise">
 <h1 class="title">c5ak.com</h1>
 <br><br><br>
-<p class="subtitle">hello</p>
+ <button type="button" class="collapsible">about</button>
+<div class="content">
+  <p>i just wanna make cool stuff</p>
+</div> 
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+} 
+</script>
 </body>
 </html>
