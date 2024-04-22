@@ -30,11 +30,14 @@ button {
   background: none;
 }
 .content {
-  padding: 4px;
+ height: 5%;
+  padding: 0 4px;
   display: none;
   overflow: hidden;
   font-size: 25px;
-  margin-left: 5%;
+  margin-left: 6%;
+  margin-top: -1%;
+  margin-bottom: -1%;
 }
 .active, .collapsible:hover {
   color: #638889;
@@ -48,6 +51,11 @@ button {
  <button type="button" class="collapsible">about</button>
 <div class="content">
   <p>i just wanna make cool stuff</p>
+</div> 
+<p></p> <!--this works gooder than a break, the break disappears when it's collapsed for some reason-->
+ <button type="button" class="collapsible">second button</button>
+<div class="content">
+  <p>wow! a second one</p>
 </div> 
 
 <script>
